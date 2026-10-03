@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amanath Tours | Ultra-Luxury Travel & Fleet Concierge</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --bg-dark: #070908;
+      --card-bg: rgba(16, 22, 18, 0.94);
+      --card-border: rgba(212, 175, 55, 0.28);
+      --gold-primary: #d4af37;
+      --gold-gradient: linear-gradient(135deg, #fae8a4 0%, #d4af37 50%, #94741f 100%);
+      --gold-glow: rgba(212, 175, 55, 0.45);
+      --text-pure: #ffffff;
+      --text-muted: #b5beb8;
+      --whatsapp-green: #25d366;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-pure);
+      line-height: 1.6;
+      padding-bottom: 70px;
+      overflow-x: hidden;
+    }
+
+    .serif-title {
+      font-family: 'Cinzel', serif;
+      letter-spacing: 2.5px;
+    }
+
+    /* Keyframe Animations */
+    @keyframes spinSlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes pulseAura {
+      0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.4));
+      }
+      50% {
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 16px rgba(250, 232, 164, 0.7));
+      }
+    }
+
+    @keyframes shimmerGold {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    @keyframes goldWallBeam {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+
+    /* Sticky Modern Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(7, 9, 8, 0.98);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 1000;
+    }
+
+    .header-main-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 6%;
+    }
+
+    .brand-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      text-decoration: none;
+    }
+
+    .logo-emblem-wrap {
+      width: 48px;
+      height: 48px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: pulseAura 4s infinite ease-in-out;
+    }
+
+    .animated-compass-svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .compass-rotating-ring {
+      transform-origin: center;
+      animation: spinSlow 18s linear infinite;
+    }
+
+    .brand-text h1 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: 3.5px;
+      color: #ffffff;
+      line-height: 1.1;
+    }
+
+    .brand-text span {
+      font-size: 0.62rem;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+      display: block;
+    }
+
+    .btn-direct {
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid var(--gold-primary);
+      color: #fff;
+      padding: 9px 20px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+    }
+
+    .btn-direct:hover {
+      background: var(--gold-gradient);
+      color: #070908;
+      box-shadow: 0 0 20px var(--gold-glow);
+    }
+
+    /* THE LUXURY GOLDEN HORIZON WALL */
+    .luxury-gold-wall {
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(212, 175, 55, 0.3) 15%, 
+        #fae8a4 50%, 
+        rgba(212, 175, 55, 0.3) 85%, 
+        transparent 100%);
+      background-size: 200% 100%;
+      animation: goldWallBeam 4.5s linear infinite;
+      box-shadow: 0 2px 14px rgba(212, 175, 55, 0.5);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 65px 20px;
+      background-image: 
+        linear-gradient(180deg, rgba(7, 9, 8, 0.72) 0%, rgba(7, 9, 8, 0.9) 75%, #070908 100%),
+        url('https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .quote-box {
+      max-width: 650px;
+      margin-bottom: 25px;
+      padding: 16px 24px;
+      border-top: 1px solid rgba(212, 175, 55, 0.3);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+      background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.08) 0%, transparent 80%);
+    }
+
+    .poetic-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.08rem;
+      font-style: italic;
+      color: #f7e096;
+      line-height: 1.7;
+    }
+
+    .quote-author {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-top: 8px;
+      display: block;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-style: normal;
+    }
+
+    .verified-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      background: rgba(0, 0, 0, 0.65);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: 50px;
+      font-size: 0.68rem;
+      color: #fae8a4;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero h2 {
+      font-size: clamp(2.1rem, 5.5vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.25;
+      text-transform: uppercase;
+      max-width: 820px;
+      margin-bottom: 18px;
+    }
+
+    .hero h2 .highlight-gold {
+      background: linear-gradient(90deg, #fae8a4, #d4af37, #ffffff, #fae8a4);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      animation: shimmerGold 6s linear infinite;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 600px;
+      margin: 0 auto 35px;
+      font-weight: 400;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .btn-luxury-primary {
+      background: rgba(28, 20, 10, 0.65);
+      border: 1px solid var(--gold-primary);
+      color: #fff;
+      padding: 15px 24px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 2px;
+      text-decoration: none;
+      text-transform: uppercase;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .btn-luxury-primary:hover {
+      background: var(--gold-gradient);
+      color: #000;
+      box-shadow: 0 0 25px var(--gold-glow);
+    }
+
+    .btn-luxury-secondary {
+      background: rgba(10, 14, 11, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #e5e5e5;
+      padding: 15px 24px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.82rem;
+      letter-spacing: 2px;
+      text-decoration: none;
+      text-transform: uppercase;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .btn-luxury-secondary:hover {
+      border-color: var(--gold-primary);
+      color: var(--gold-primary);
+    }
+
+    .section-header {
+      text-align: center;
+      margin: 60px 0 30px;
+      padding: 0 20px;
+    }
+
+    /* Destination Profile Cards */
+    .dest-list {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .profile-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      overflow: hidden;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.65);
+      transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .profile-card:hover {
+      border-color: var(--gold-primary);
+      box-shadow: 0 22px 55px rgba(212, 175, 55, 0.15);
+    }
+
+    .profile-header-strip {
+      padding: 14px 22px;
+      background: linear-gradient(90deg, rgba(20, 28, 22, 0.95) 0%, rgba(12, 16, 13, 0.85) 100%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .landmark-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .mini-sights-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .sight-pill {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.65rem;
+      color: #e5ebe7;
+      letter-spacing: 0.5px;
+    }
+
+    /* HORIZONTAL TOUCH SCROLL GALLERY (CAROUSEL) */
+    .gallery-scroll-wrapper {
+      position: relative;
+      background: #0b0f0c;
+    }
+
+    .gallery-scroll-track {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 14px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--gold-primary) rgba(0, 0, 0, 0.5);
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .gallery-scroll-track::-webkit-scrollbar {
+      height: 5px;
+    }
+
+    .gallery-scroll-track::-webkit-scrollbar-thumb {
+      background: var(--gold-primary);
+      border-radius: 10px;
+    }
+
+    .gallery-item {
+      flex: 0 0 85%;
+      height: 290px;
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      scroll-snap-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+      .gallery-item {
+        flex: 0 0 65%;
+        height: 330px;
+      }
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+
+    .photo-caption-tag {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      background: rgba(7, 10, 8, 0.85);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--gold-primary);
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 0.68rem;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      z-index: 5;
+    }
+
+    .swipe-hint-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.62rem;
+      color: var(--gold-primary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      z-index: 5;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .profile-content {
+      padding: 24px 26px 20px;
+    }
+
+    .profile-content h3 {
+      font-size: 1.45rem;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .dest-tagline {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .profile-insights-panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.35s ease;
+      background: rgba(8, 12, 10, 0.75);
+      border-radius: 14px;
+      margin-bottom: 18px;
+      padding: 0 18px;
+      border: 1px solid transparent;
+    }
+
+    .profile-insights-panel.active {
+      max-height: 1100px;
+      padding: 22px 18px;
+      border-color: rgba(212, 175, 55, 0.25);
+    }
+
+    .literary-desc {
+      font-size: 0.92rem;
+      color: #e5ebe7;
+      line-height: 1.8;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+
+    .detailed-sights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .detailed-sight-card {
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 2px solid var(--gold-primary);
+      padding: 10px 14px;
+      border-radius: 4px;
+    }
+
+    .detailed-sight-card strong {
+      color: #fff;
+      display: block;
+      font-size: 0.84rem;
+      margin-bottom: 3px;
+    }
+
+    .detailed-sight-card span {
+      color: var(--text-muted);
+      font-size: 0.76rem;
+    }
+
+    /* Live Trip Cost & Fleet Booking Desk (Industry Standard Step) */
+    .calculator-wrapper {
+      max-width: 800px;
+      margin: 70px auto 40px;
+      padding: 0 16px;
+    }
+
+    .glass-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 38px 28px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    }
+
+    .calc-title {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .calc-title h3 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-top: 6px;
+    }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    @media (max-width: 640px) {
+      .calc-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .input-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .input-field label {
+      font-size: 0.72rem;
+      color: var(--gold-primary);
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .input-field select, .input-field input, .input-field textarea {
+      background: rgba(9, 13, 10, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 13px 15px;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border 0.3s ease;
+    }
+
+    .input-field textarea {
+      resize: vertical;
+      min-height: 80px;
+      font-family: inherit;
+      line-height: 1.5;
+    }
+
+    .input-field select:focus, .input-field input:focus, .input-field textarea:focus {
+      border-color: var(--gold-primary);
+    }
+
+    .price-output-box {
+      margin-top: 25px;
+      padding: 24px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(212, 175, 55, 0.07) 0%, rgba(0, 0, 0, 0.4) 100%);
+      border: 1px dashed var(--gold-primary);
+      text-align: center;
+    }
+
+    .price-output-box span {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .final-price {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: #fff;
+      margin: 8px 0;
+      font-family: 'Cinzel', serif;
+    }
+
+    .final-price span {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Advance Booking & UPI Card */
+    .reserve-box {
+      max-width: 640px;
+      margin: 40px auto 40px;
+      padding: 35px 25px;
+      text-align: center;
+      border: 1px solid var(--card-border);
+      background: radial-gradient(circle at top, rgba(212, 175, 55, 0.09) 0%, var(--card-bg) 80%);
+      border-radius: 20px;
+    }
+
+    .qr-container {
+      width: 175px;
+      height: 175px;
+      background: #fff;
+      margin: 22px auto;
+      border-radius: 14px;
+      padding: 10px;
+    }
+
+    .qr-container img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .upi-tag {
+      background: rgba(0, 0, 0, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      display: inline-block;
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-size: 0.92rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 22px;
+    }
+
+    /* Verified Guest Reviews Section */
+    .reviews-section {
+      max-width: 900px;
+      margin: 60px auto 20px;
+      padding: 0 20px;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .review-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .review-stars {
+      color: var(--gold-primary);
+      font-size: 0.85rem;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+
+    .review-quote {
+      font-size: 0.88rem;
+      color: #dfe7e2;
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 18px;
+    }
+
+    .reviewer-meta {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .reviewer-name {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .reviewer-trip {
+      font-size: 0.72rem;
+      color: var(--gold-primary);
+    }
+
+    /* Final Feedback, Ratings & Suggestions Corner */
+    .opinion-feedback-section {
+      max-width: 800px;
+      margin: 40px auto 60px;
+      padding: 0 18px;
+    }
+
+    .opinion-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 34px 26px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    /* REDESIGNED ROYAL LUXURY FLOATING WHATSAPP CONCIERGE */
+    .royal-wa-concierge {
+      position: fixed;
+      bottom: 24px;
+      right: 22px;
+      background: rgba(10, 15, 12, 0.95);
+      border: 1.5px solid var(--gold-primary);
+      backdrop-filter: blur(16px);
+      padding: 9px 18px 9px 12px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 18px rgba(212, 175, 55, 0.3);
+      z-index: 1000;
+      transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .royal-wa-icon-glow {
+      width: 36px;
+      height: 36px;
+      background: radial-gradient(circle, #25d366 0%, #179847 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.2rem;
+      box-shadow: 0 0 12px rgba(37, 211, 102, 0.7);
+      position: relative;
+    }
+
+    .royal-wa-icon-glow::after {
+      content: '';
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      width: 8px;
+      height: 8px;
+      background: #70ff99;
+      border: 1.5px solid #070908;
+      border-radius: 50%;
+    }
+
+    .royal-wa-text-box {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .royal-wa-sub {
+      font-size: 0.58rem;
+      color: var(--gold-primary);
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .royal-wa-title {
+      font-family: 'Cinzel', serif;
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+
+    .royal-wa-concierge:hover {
+      transform: translateY(-4px) scale(1.04);
+      border-color: #fae8a4;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9), 0 0 25px rgba(212, 175, 55, 0.55);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header with Animated Royal Compass Logo -->
+  <header>
+    <div class="header-main-bar">
+      <a href="#" class="brand-container">
+        <div class="logo-emblem-wrap">
+          <svg class="animated-compass-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fae8a4" />
+                <stop offset="50%" stop-color="#d4af37" />
+                <stop offset="100%" stop-color="#94741f" />
+              </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="46" stroke="url(#goldGrad)" stroke-width="1.8" stroke-dasharray="6 3" opacity="0.85" />
+            <g class="compass-rotating-ring">
+              <circle cx="50" cy="50" r="38" stroke="url(#goldGrad)" stroke-width="1" stroke-dasharray="2 6" opacity="0.6" />
+              <polygon points="50,16 53,24 47,24" fill="url(#goldGrad)" />
+              <polygon points="50,84 53,76 47,76" fill="url(#goldGrad)" opacity="0.7" />
+              <polygon points="16,50 24,53 24,47" fill="url(#goldGrad)" opacity="0.7" />
+              <polygon points="84,50 76,53 76,47" fill="url(#goldGrad)" opacity="0.7" />
+            </g>
+            <text x="50" y="59" font-family="'Cinzel', serif" font-size="28" font-weight="900" fill="url(#goldGrad)" text-anchor="middle">A</text>
+          </svg>
+        </div>
+
+        <div class="brand-text">
+          <h1 class="serif-title">AMANATH</h1>
+          <span>Tours & Mobility Concierge</span>
+        </div>
+      </a>
+      <button class="btn-direct" onclick="location.href='#booking-desk'">Direct Desk</button>
+    </div>
+
+    <!-- MODERN LUXURY EXTENDING GOLDEN HORIZON WALL -->
+    <div class="luxury-gold-wall"></div>
+  </header>
+
+  <!-- Hero with Poetic Travel Quote & Dark Backwater Backdrop -->
+  <section class="hero">
+    <div class="quote-box">
+      <p class="poetic-quote">
+        “The world reveals its finest secrets only to those who travel slowly, in quiet elegance and unhurried grace.”
+      </p>
+      <span class="quote-author">— The Art of Mindful Journeys</span>
+    </div>
+
+    <div class="verified-pill">
+      <i class="fa-solid fa-certificate" style="color: var(--gold-primary);"></i>
+      <span>Verified Direct Operator • Kerala, Nilgiris & Islands</span>
+    </div>
+
+    <h2 class="serif-title">Unrivaled Journeys At <br><span class="highlight-gold">Honest Value</span></h2>
+    <p>Pristine private chauffeur fleets, handpicked hill resorts, and slow tropical cruises across Kerala, Ooty, Andaman, and Lakshadweep.</p>
+    
+    <div class="hero-actions">
+      <a href="#booking-desk" class="btn-luxury-primary">Calculate & Plan Trip</a>
+      <a href="#destinations" class="btn-luxury-secondary">View Destinations</a>
+    </div>
+  </section>
+
+  <!-- 1. SIGNATURE DESTINATIONS SHOWCASE WITH HORIZONTAL TOUCH SCROLL GALLERIES -->
+  <div class="section-header" id="destinations">
+    <div class="verified-pill">Interactive Landmark Galleries</div>
+    <h2 class="serif-title">Curated Destination Profiles</h2>
+    <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 6px;">Swipe & scroll photos to explore landmarks. Tap to reveal day-wise itineraries.</p>
+  </div>
+
+  <div class="dest-list">
+
+    <!-- 1. OOTY PROFILE: SCROLLABLE NILGIRI MOUNTAIN TOY TRAIN, MISTY FORESTS & LAKES -->
+    <div class="profile-card">
+      <div class="profile-header-strip">
+        <div class="landmark-badge">
+          <i class="fa-solid fa-train"></i>
+          <span>Ooty & Nilgiri Hills (UNESCO Heritage Train Special)</span>
+        </div>
+        <div class="mini-sights-row">
+          <span class="sight-pill">Steam Toy Train</span>
+          <span class="sight-pill">Doddabetta Peak</span>
+          <span class="sight-pill">Pykara Lake</span>
+          <span class="sight-pill">Pine Needle Forest</span>
+        </div>
+      </div>
+
+      <!-- Scrollable Multi-Image Gallery for Ooty -->
+      <div class="gallery-scroll-wrapper">
+        <div class="swipe-hint-badge"><i class="fa-solid fa-arrow-left"></i> Swipe Photos <i class="fa-solid fa-arrow-right"></i></div>
+        <div class="gallery-scroll-track">
+          <!-- 1. Authentic Blue Steam Toy Train in Nilgiri Mountains -->
+          <div class="gallery-item" onclick="toggleProfileDetails('ooty-insights')">
+            <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1000&q=80" alt="Ooty Nilgiri Mountain Toy Train" loading="eager">
+            <div class="photo-caption-tag"><i class="fa-solid fa-train"></i> Nilgiri Heritage Steam Toy Train</div>
+          </div>
+          <!-- 2. Misty Pine Forest & Ghat Roads -->
+          <div class="gallery-item" onclick="toggleProfileDetails('ooty-insights')">
+            <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1000&q=80" alt="Ooty Pine Needles Forest" loading="lazy">
+            <div class="photo-caption-tag"><i class="fa-solid fa-tree"></i> Shola Pines & Shooting Point</div>
+          </div>
+          <!-- 3. Doddabetta Misty Peak -->
+          <div class="gallery-item" onclick="toggleProfileDetails('ooty-insights')">
+            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1000&q=80" alt="Ooty Valley Mist" loading="lazy">
+            <div class="photo-caption-tag"><i class="fa-solid fa-cloud-sun"></i> Doddabetta Valley Mist</div>
+          </div>
+          <!-- 4. Pykara Lake Boating -->
+          <div class="gallery-item" onclick="toggleProfileDetails('ooty-insights')">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80" alt="Pykara Lake Boating" loading="lazy">
+            <div class="photo-caption-tag"><i class="fa-solid fa-water"></i> Pykara Lake Boating Sanctuary</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-content">
+        <h3 class="serif-title">Ooty & Nilgiri Heritage Hills</h3>
+        <p class="dest-tagline">Ride the legendary UNESCO Heritage steam toy train through 208 curves and 16 tunnels, amidst cedar groves, botanical gardens, and stone cottages.</p>
+
+        <div class="profile-insights-panel" id="ooty-insights">
+          <p class="literary-desc">
+            "Revered as the Queen of Hill Stations, Ooty echoes a nostalgic British colonial charm draped in blue eucalyptus groves and winding toy train tracks that slice through dramatic mountain mist."
+          </p>
+          <div class="detailed-sights-grid">
+            <div class="detailed-sight-card">
+              <strong>Nilgiri Mountain Railway</strong>
+              <span>Historic blue steam toy train & arched stone bridges</span>
+            </div>
+            <div class="detailed-sight-card">
+              <strong>Doddabetta Peak</strong>
+              <span>Highest panoramic vantage in the Nilgiris</span>
+            </div>
+            <div class="detailed-sight-card">
+              <strong>Pykara Lake & Waterfalls</strong>
+              <span>Pristine speedboating fringed by shola reserves</span>
+            </div>
+            <div class="detailed-sight-card">
+              <strong>Pine Needle Forests & Shooting Point</strong>
+              <span>Towering pine groves and horse riding trails</span>
+            </div>
+          </div>
+        </div>
+
+        <button onclick="selectPackageFromCard('4400')" class="btn-luxury-primary" style="font-size: 0.75rem; padding: 11px 22px; cursor: pointer;">
+          SELECT OOTY PACKAGE &rarr;
+        </button>
+      </div>
+    </div>
+
+    <!-- 2. WAYANAD PROFILE: SCROLLABLE MISTY RAINFOREST, CAVES & DAMS -->
+    <div class="profile-card">
+      <div class="profile-header-strip">
+        <div class="landmark-badge">
+          <i class="fa-solid fa-tree"></i>
+          <span>Wayanad Mist & Wildlife Highlands</span>
+        </div>
+        <div class="mini-sights-row">
+          <span class="sight-pill">Banasura Earthen Dam</span>
+          <span class="sight-pill">Edakkal Caves</span>
+          <span class="sight-pill">Chembra Heart Lake</span>
+          <span class="sight-pill">Muthanga Safari</span>
+        </div>
+      </div>
+
+      <div class="gallery-scroll-wrapper">
+        <div class="swipe-hint-badge"><i class="fa-solid fa-arrow-left"></i> Swipe Photos <i class="fa-solid fa-arrow-right"></i></div>
+        <div class="gallery-scroll-track">
+          <!-- 1. Western Ghats Mountain Canopy -->
+          <div class="gallery-item" onclick="toggleProfileDetails('wayanad-insights')">
+            <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1000&q=80" alt="Wayanad Rainforest Mountain" loading="lazy">
+            <div class="photo-caption-tag"><i class="fa-solid fa-mountain"></i> Western Ghats Rainforest Canopy</div>
+          </div>
+          <!-- 2. Banasura Island Reservoir -->
+          <div class="gallery-item" onclick="toggleProfileDetails('wayanad-insights')">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80" alt="Banasura Sagar Lake Islands" loading="lazy">
+            <div class="photo-caption-tag"><i class="fa-solid fa-water"></i> Banasura Sagar Earthen Dam & Islands</div>
+          </div>
+          <!-- 3. Chembra Misty Peaks -->
+          <div class="gallery-item" onclick="toggleProfileDetails('wayanad-insights')">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1000&q=80" alt="Chembra Misty Mountain" loading="lazy">
+            <div class="photo-caption-tag"><i class="fa-solid fa-heart"></i> Chembra Peak & Heart-shaped Lake</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-content">
+        <h3 class="serif-title">Wayanad Mist & Wildlife</h3>
+        <p class="dest-tagline">Cool forest mist, aromatic spice plantations, prehistoric caves, and secluded luxury rainforest pool villas.</p>
+
+        <div class="profile-insights-panel" id="wayanad-insights">
+          <p class="literary-desc">
+            "A lush wilderness draped in evergreen mystery and spice-laden breezes. Discover prehistoric Neolithic rock etchings, misty mountain lakes, and untamed nature sanctuaries."
+          </p>
+          <div class="detailed-sights-grid">
+            <div class="detailed-sight-card">
+              <strong>Banasura Sagar Dam</strong>
+              <span>Asia's second-largest earthen dam and islands</span>
+            </div>
+            <div class="detailed-sight-card">
+              <strong>Edakkal Caves</strong>
+              <span>Prehistoric stone carvings and historic vistas</span>
+            </div>
+            <div class="detailed-sight-card">
+              <strong>Chembra Peak</strong>
+              <span>Heart-shaped misty alpine lake trek</span>
+            </div>
+            <div class="detailed-sight-card">
+              <strong>Muthanga Wildlife Sanctuary</strong>
+              <span>Jeep safari tracking wild elephant herds</span>
+            </div>
+          </div>
+        </div>
+
+        <button onclick="selectPackageFromCard('3900')" class="btn-luxury-primary" style="font-size: 0.75rem; padding: 11px 22px; cursor: pointer;">
+          SELECT WAYANAD PACKAGE &rarr;
+        </button>
+      </div>
+    </div>
+
+    <!-- 3. MUNNAR PROFILE: SCROLLABLE TEA VALLEYS, PEAKS & LAKES -->
+    <div class="profile-card">
+      <div class="profile-header-strip">
+        <div class="landmark-badge">
+          <i class="fa-solid fa-mountain-sun"></i>
+          <span>Munnar Tea Valleys & Highland Peaks</span>
+        </div>
+        <div class="mini-sights-row">
+          <span class="sight-pill">Kolukkumalai Sunrise</span>
+          <span class="sight-pill">Eravikulam Tahr</span>
+          <span class="sight-pill">Mattupetty Lake</span>
+          <span class="sight-pill">Kundala Dam</span>
+        </div>
+      </div>
+
+      <div class="gallery-scroll-wrapper">
+        <div class="swipe-hint-badge"><i class="fa-solid fa-arrow-left"></i> Swipe Photos <i class="fa-solid fa-arrow-right"></i></div>
+        <div class="gallery-scroll-track">
+          <!-- 1. Rolling Green Tea Carpet -->
+          <div class="gallery-item" onclick="toggleProfileDetails('munnar-insights')">
+            <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1000&q=80" alt="Munnar Tea Hills" loading="lazy">
+            <div class="photo-caption-tag"><i class="fa-solid fa-leaf"></i> Velvet Green Tea Estates</div>
+          </div>
+          <!-- 2. High Altitude Lake & Shola -->
+          <div class="gallery-item" onclick="toggleProfileDetails('munnar-insights')">
+            <img src="https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80" alt="Munnar Mist Lake" loading="lazy">
+            <div class="photo-caption-tag"><i class="fa-solid fa-water"></i> Mattupetty Lake & Speedboating</div>
+          </div>
+          <!-- 3. Kolukkumalai Sunrise Peak -->
+          <div class="gallery-item" onclick="toggleProfileDetails('munnar-insights')">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80" alt="Kolukkumalai Sunrise" loading="lazy">
+            <div class="photo-caption-tag"><i class="fa-solid fa-sun"></i> Kolukkumalai World's Highest Tea Safari</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-content">
+        <h3 class="serif-title">Munnar Tea Valleys</h3>
+        <p class="dest-tagline">Rolling green velvet tea plantations, mountain trails, and colonial tea factory experiences tailored for connoisseurs.</p>
+
+        <div class="profile-insights-panel" id="munnar-insights">
+          <p class="literary-desc">
+            "Where emerald blankets carpet ancient hills and morning whispers of mist kiss the peaks. Munnar is a timeless sanctuary of crisp mountain air, cascading silver streams, and colonial tranquility."
+          </p>
+          <div class="detailed-sights-grid">
+            <div class="detailed-sight-card">
+              <strong>Kolukkumalai Sunrise Safari</strong>
+              <span>World's highest orthodox tea estate jeep trek</span>
+            </div>
+            <div class="detailed-sight-card">
+              <strong>Eravikulam National Park</strong>
+              <span>Home to the rare Nilgiri Tahr & Anamudi views</span>
+            </div>
+            <div class="detailed-sight-card">
+              <strong>Mattupetty Lake & Dam</strong>
+              <span>Tranquil boating amidst green knolls</span>
+            </div>
+            <div class="detailed-sight-card">
+              <strong>Kundala Lake & Attukad Falls</strong>
+              <span>Classic Kashmiri Shikara rides & wild waterfalls</span>
+            </div>
+          </div>
+        </div>
+
+        <button onclick="selectPackageFromCard('3800')" class="btn-luxury-primary" style="font-size: 0.75rem; padding: 11px 22px; cursor: pointer;">
+          SELECT MUNNAR PACKAGE &rarr;
+        </button>
+      </div>
+    </div>
+
+    <!-- 4. ALLEPPEY PROFILE: SCROLLABLE HOUSEBOATS, CANALS & LAGOONS -->
+    <div class="profile-card">
+      <div class="profile-header-strip">
+        <div class="landmark-badge">
+          <i class="fa-solid fa-ship"></i>
+          <span>Alleppey Canals & Heritage Backwaters</span>
+        </div>
+        <div class="mini-sights-row">
+          <span class="sight-pill">Private Houseboat</span>
+          <span class="sight-pill">Vembanad Lake</span>
+          <span class="sight-pill">Shikara Cruise</span>
+          <span class="sight-pill">Marari Beach</span>
+        </div>
+      </div>
+
+      <div class="gallery-scroll-wrapper">
+        <div class="swipe-hint-badge"><i class="fa-solid fa-arrow-left"></i> Swipe Photos <i class="fa-solid fa-arrow-right"></i></div>
+        <div class="gallery-scroll-track">
+          <!-- 1. Luxury Houseboat Cruise -->
+          <div class="gallery-item" onclick="toggleProfileDetails('alleppey-insights')">
+            <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1000&q=80" alt="Alleppey Luxury Houseboat" loading="lazy">
+            <div class="photo-caption-tag"><i class="fa-solid fa-ship"></i> Luxury Overnight Houseboat Stay</div>
+          </div>
+          <!-- 2. Sunset Palm Lagoons -->
+          <div class="gallery-item" onclick="toggleProfileDetails('alleppey-insights')">
+            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1000&q=80" alt="Alleppey Sunset Backwaters" loading="lazy">
+            <div class="photo-caption-tag"><i class="fa-solid fa-water"></i> Vembanad Sunset Shikara Trails</div>
+          </div>
+          <!-- 3. Coastal Marari White Sand -->
+          <div class="gallery-item" onclick="toggleProfileDetails('alleppey-insights')">
+            <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1000&q=80" alt="Marari Beach Seaside" loading="lazy">
+            <div class="photo-caption-tag"><i class="fa-solid fa-umbrella-beach"></i> Marari Beach Coastal Resort Retreat</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-content">
+        <h3 class="serif-title">Alleppey Canals & Lagoons</h3>
+        <p class="dest-tagline">Peaceful palm-lined waterways; choose between private luxury overnight houseboats and silent country Shikara cruises.</p>
+
+        <div class="profile-insights-panel" id="alleppey-insights">
+          <p class="literary-desc">
+            "The Venice of the East, where time flows as gently as the emerald tides. Glide through sleepy palm-canopied waterways in handcrafted wooden houseboats while savoring gourmet coastal delicacies."
+          </p>
+          <div class="detailed-sights-grid">
+            <div class="detailed-sight-card">
+              <strong>Private Luxury Houseboat</strong>
+              <span>Overnight cruise, private butler & gourmet feast</span>
+            </div>
+            <div class="detailed-sight-card">
+              <strong>Vembanad Lake Shikara</strong>
+              <span>Intimate sunset cruises through village estuaries</span>
+            </div>
+            <div class="detailed-sight-card">
+              <strong>Marari White Sand Beach</strong>
+              <span>Tranquil pristine shores for secluded unwinding</span>
+            </div>
+          </div>
+        </div>
+
+        <button onclick="selectPackageFromCard('4100')" class="btn-luxury-primary" style="font-size: 0.75rem; padding: 11px 22px; cursor: pointer;">
+          SELECT ALLEPPEY PACKAGE &rarr;
+        </button>
+      </div>
+    </div>
+
+    <!-- 5. LAKSHADWEEP PROFILE: SCROLLABLE TURQUOISE CORAL ATOLLS & SCUBA -->
+    <div class="profile-card">
+      <div class="profile-header-strip">
+        <div class="landmark-badge">
+          <i class="fa-solid fa-water"></i>
+          <span>Lakshadweep Coral Paradise & Lagoons</span>
+        </div>
+        <div class="mini-sights-row">
+          <span class="sight-pill">Bangaram Atoll</span>
+          <span class="sight-pill">Agatti Landing</span>
+          <span class="sight-pill">PADI Scuba</span>
+          <span class="sight-pill">VIP Island Permits</span>
+        </div>
+      </div>
+
+      <div class="gallery-scroll-wrapper">
+        <div class="swipe-hint-badge"><i class="fa-solid fa-arrow-left"></i> Swipe Photos <i class="fa-solid fa-arrow-right"></i></div>
+        <div class="gallery-scroll-track">
+          <!-- 1. Crystal Turquoise Lagoon -->
+          <div class="gallery-item" onclick="toggleProfileDetails('lakshadweep-insights')">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80" alt="Bangaram Atoll Lagoon" loading="lazy">
+            <div class="photo-caption-tag"><i class="fa-solid fa-water"></i> Crystal Turquoise Bangaram Atoll</div>
+          </div>
+          <!-- 2. White Sand Seclusion -->
+          <div class="gallery-item" onclick="toggleProfileDetails('lakshadweep-insights')">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80" alt="Agatti Beach Shore" loading="lazy">
+            <div class="photo-caption-tag"><i class="fa-solid fa-umbrella-beach"></i> Agatti Island Powder Sands</div>
+          </div>
+          <!-- 3. Turtle Reef Scuba -->
+          <div class="gallery-item" onclick="toggleProfileDetails('lakshadweep-insights')">
+            <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1000&q=80" alt="Coral Reef Diving" loading="lazy">
+            <div class="photo-caption-tag"><i class="fa-solid fa-fish"></i> Live Coral Reef & Turtle Scuba</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-content">
+        <h3 class="serif-title">Lakshadweep Coral Paradise</h3>
+        <p class="dest-tagline">Crystal turquoise lagoons, Agatti & Bangaram atoll permits, scuba reefs, and VIP island speed-boat transfers.</p>
+
+        <div class="profile-insights-panel" id="lakshadweep-insights">
+          <p class="literary-desc">
+            "A shimmering necklace of coral atolls floating in the azure Arabian Sea. Pristine white sands, unpolluted coral reefs teeming with sea turtles, and luxury private beach villas."
+          </p>
+          <div class="detailed-sights-grid">
+            <div class="detailed-sight-card">
+              <strong>Agatti Island Lagoon</strong>
+              <span>World-class flight landing over crystal turquoise waters</span>
+            </div>
+            <div class="detailed-sight-card">
+              <strong>Bangaram Atoll Seclusion</strong>
+              <span>Tear-drop shaped uninhabited coral resort island</span>
+            </div>
+            <div class="detailed-sight-card">
+              <strong>PADI Scuba & Snorkel Trails</strong>
+              <span>Vibrant live coral reefs & manta ray encounters</span>
+            </div>
+            <div class="detailed-sight-card">
+              <strong>VIP Entry Permits</strong>
+              <span>Full documentation & expedited island clearances</span>
+            </div>
+          </div>
+        </div>
+
+        <button onclick="selectPackageFromCard('8500')" class="btn-luxury-primary" style="font-size: 0.75rem; padding: 11px 22px; cursor: pointer;">
+          INQUIRE LAKSHADWEEP &rarr;
+        </button>
+      </div>
+    </div>
+
+    <!-- 6. ANDAMAN PROFILE: SCROLLABLE RADHANAGAR, CATAMARANS & REEFS -->
+    <div class="profile-card">
+      <div class="profile-header-strip">
+        <div class="landmark-badge">
+          <i class="fa-solid fa-umbrella-beach"></i>
+          <span>Andaman Exotic Island Catamarans</span>
+        </div>
+        <div class="mini-sights-row">
+          <span class="sight-pill">Radhanagar Sunset</span>
+          <span class="sight-pill">Havelock Island</span>
+          <span class="sight-pill">Makruzz Catamaran</span>
+          <span class="sight-pill">Elephant Beach</span>
+        </div>
+      </div>
+
+      <div class="gallery-scroll-wrapper">
+        <div class="swipe-hint-badge"><i class="fa-solid fa-arrow-left"></i> Swipe Photos <i class="fa-solid fa-arrow-right"></i></div>
+        <div class="gallery-scroll-track">
+          <!-- 1. Radhanagar Sunset Beach -->
+          <div class="gallery-item" onclick="toggleProfileDetails('andaman-insights')">
+            <img src="https://images.unsplash.com/photo-1589330273594-fade1ee91647?auto=format&fit=crop&w=1000&q=80" alt="Radhanagar Beach Sunset" loading="lazy">
+            <div class="photo-caption-tag"><i class="fa-solid fa-sun"></i> Radhanagar Sunset Coastline</div>
+          </div>
+          <!-- 2. Tropical Island Waters -->
+          <div class="gallery-item" onclick="toggleProfileDetails('andaman-insights')">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80" alt="Havelock Ocean Water" loading="lazy">
+            <div class="photo-caption-tag"><i class="fa-solid fa-ship"></i> Havelock Island Makruzz Catamaran Pier</div>
+          </div>
+          <!-- 3. Coastal Reef Delta -->
+          <div class="gallery-item" onclick="toggleProfileDetails('andaman-insights')">
+            <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1000&q=80" alt="Neil Island Rock Natural Bridge" loading="lazy">
+            <div class="photo-caption-tag"><i class="fa-solid fa-water"></i> Neil Island Natural Rock Formations</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-content">
+        <h3 class="serif-title">Andaman Exotic Islands</h3>
+        <p class="dest-tagline">Radhanagar beach sunset, luxury high-speed Makruzz catamaran to Havelock, and dedicated island concierge.</p>
+
+        <div class="profile-insights-panel" id="andaman-insights">
+          <p class="literary-desc">
+            "Ancient tropical rainforests meeting powdery white beaches and emerald Andaman ocean depths. A tapestry of world-renowned coastlines and luxurious catamaran sea voyages."
+          </p>
+          <div class="detailed-sights-grid">
+            <div class="detailed-sight-card">
+              <strong>Radhanagar Beach (Havelock)</strong>
+              <span>Rated Asia's most majestic sunset coastline</span>
+            </div>
+            <div class="detailed-sight-card">
+              <strong>Makruzz Luxury Catamaran</strong>
+              <span>Premium air-conditioned inter-island cruise</span>
+            </div>
+            <div class="detailed-sight-card">
+              <strong>Elephant Beach Sea Walk</strong>
+              <span>Underwater walk through coral gardens</span>
+            </div>
+          </div>
+        </div>
+
+        <button onclick="selectPackageFromCard('9000')" class="btn-luxury-primary" style="font-size: 0.75rem; padding: 11px 22px; cursor: pointer;">
+          INQUIRE ANDAMAN &rarr;
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 2. LIVE TRIP PLANNING, FLEET ESTIMATOR & BOOKING DESK -->
+  <div class="calculator-wrapper" id="booking-desk">
+    <div class="glass-card">
+      <div class="calc-title">
+        <div class="verified-pill" style="margin-bottom: 8px;">
+          <i class="fa-solid fa-sliders"></i>
+          <span>Live Instant Booking Desk</span>
+        </div>
+        <h3 class="serif-title">Trip Planning & Direct Booking</h3>
+        <p style="color: var(--text-muted); font-size: 0.82rem; margin-top: 5px;">Configure your itinerary below to dispatch a complete reservation breakdown directly to our WhatsApp Desk.</p>
+      </div>
+
+      <div class="calc-grid">
+        <!-- Guest Name -->
+        <div class="input-field">
+          <label><i class="fa-solid fa-user"></i> Full Name</label>
+          <input type="text" id="guestName" placeholder="e.g. Suhail Mubarak" required>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="input-field">
+          <label><i class="fa-solid fa-phone"></i> Contact Phone / WhatsApp</label>
+          <input type="tel" id="guestPhone" placeholder="e.g. +91 99475 85233" required>
+        </div>
+
+        <!-- PICKUP POINT / AIRPORT SELECTION -->
+        <div class="input-field">
+          <label><i class="fa-solid fa-plane-arrival"></i> Pickup Point / Airport</label>
+          <select id="pickupPoint">
+            <option value="Cochin International Airport (COK)">Cochin Airport (COK)</option>
+            <option value="Calicut International Airport (CCJ)">Calicut Airport (CCJ)</option>
+            <option value="Coimbatore Airport (CJB)">Coimbatore Airport (CJB) - Ideal for Ooty</option>
+            <option value="Trivandrum International Airport (TRV)">Trivandrum Airport (TRV)</option>
+            <option value="Kannur International Airport (CNN)">Kannur Airport (CNN)</option>
+            <option value="Bangalore Airport (BLR)">Bangalore Airport (BLR)</option>
+            <option value="Ernakulam Railway Station (ERS/ERN)">Ernakulam Railway Station</option>
+            <option value="Kozhikode Railway Station (CLT)">Kozhikode Railway Station</option>
+            <option value="Coimbatore Junction (CBE)">Coimbatore Junction Railway Station</option>
+            <option value="Doorstep Pickup / Home / Hotel">Doorstep Pickup / Other Hotel</option>
+          </select>
+        </div>
+
+        <!-- EXACT PICKUP LOCATION / FLIGHT NUMBER -->
+        <div class="input-field">
+          <label><i class="fa-solid fa-location-dot"></i> Exact Pickup Address / Flight No.</label>
+          <input type="text" id="pickupAddress" placeholder="e.g. Flight 6E 402 or Hotel Taj Cochin">
+        </div>
+
+        <!-- Destination Selection -->
+        <div class="input-field">
+          <label><i class="fa-solid fa-map-location-dot"></i> Destination Route / Package</label>
+          <select id="routeSelect" onchange="calculateTariff()">
+            <option value="4400">Ooty & Nilgiri Hills (Toy Train Special)</option>
+            <option value="3900">Wayanad Mist & Wildlife (3 Days)</option>
+            <option value="3800">Munnar Highlands (3 Days)</option>
+            <option value="4100">Alleppey Canals & Backwaters (2 Days)</option>
+            <option value="8500">Lakshadweep Coral Paradise (Cruise & Stay)</option>
+            <option value="9000">Andaman Islands Exotic (Havelock Cruise)</option>
+          </select>
+        </div>
+
+        <!-- Travel Start Date -->
+        <div class="input-field">
+          <label><i class="fa-solid fa-calendar-check"></i> Travel Start Date</label>
+          <input type="date" id="travelDate" required>
+        </div>
+
+        <!-- Tour Duration -->
+        <div class="input-field">
+          <label><i class="fa-solid fa-calendar-days"></i> Number of Days</label>
+          <select id="daysSelect" onchange="calculateTariff()">
+            <option value="2">2 Days / 1 Night</option>
+            <option value="3" selected>3 Days / 2 Nights</option>
+            <option value="4">4 Days / 3 Nights</option>
+            <option value="5">5 Days / 4 Nights</option>
+            <option value="7">7 Days Grand Tour</option>
+          </select>
+        </div>
+
+        <!-- Total Guests -->
+        <div class="input-field">
+          <label><i class="fa-solid fa-users"></i> Total Number of People (Pax)</label>
+          <select id="groupSizeSelect" onchange="handleGroupChange()">
+            <option value="2">Couples / Solo (1 - 2 Guests)</option>
+            <option value="4" selected>Small Family (3 - 4 Guests)</option>
+            <option value="7">Executive Group (5 - 7 Guests)</option>
+            <option value="12">Medium Group (8 - 14 Guests)</option>
+            <option value="22">Large Family / Club (15 - 26 Guests)</option>
+            <option value="45">Corporate Delegation (27 - 50+ Guests)</option>
+          </select>
+        </div>
+
+        <!-- Fleet Class -->
+        <div class="input-field">
+          <label><i class="fa-solid fa-van-shuttle"></i> Dedicated Chauffeur Fleet</label>
+          <select id="fleetSelect" onchange="calculateTariff()">
+            <option value="1.0" data-cap="4">Executive Sedan (Dzire / Etios) [1-4 Pax]</option>
+            <option value="1.45" data-cap="7" selected>Luxury MPV (Innova Crysta / Hycross) [4-7 Pax]</option>
+            <option value="2.2" data-cap="6">VIP Class (Toyota Fortuner 4x4) [1-6 Pax]</option>
+            <option value="2.6" data-cap="14">Mini Luxury Coach (Force Urbania) [8-14 Pax]</option>
+            <option value="3.4" data-cap="26">Grand Executive Coach (Tempo Traveller Luxury) [15-26 Pax]</option>
+            <option value="5.8" data-cap="50">Royal Tourer (Volvo / BharatBenz Luxury Coach) [27-50 Pax]</option>
+          </select>
+        </div>
+
+        <!-- Stay Level -->
+        <div class="input-field">
+          <label><i class="fa-solid fa-hotel"></i> Hospitality & Stay Category</label>
+          <select id="staySelect" onchange="calculateTariff()">
+            <option value="0">Chauffeur Fleet Only (No Hotel Stay)</option>
+            <option value="3500">Premium 4-Star Mountain/Lagoon Resort</option>
+            <option value="7500">Ultra-Luxury 5-Star Heritage Villa / Suite</option>
+          </select>
+        </div>
+
+        <!-- CUSTOMER OPINION & SPECIAL PREFERENCES FOR THIS BOOKING -->
+        <div class="input-field" style="grid-column: 1 / -1;">
+          <label><i class="fa-solid fa-pen-fancy"></i> Custom Requests & Preferences (Your Opinion on this Tour)</label>
+          <textarea id="guestOpinion" placeholder="Mention any custom itinerary, special needs, honeymoon decor, driver language preference, or tour suggestions..."></textarea>
+        </div>
+      </div>
+
+      <!-- Realtime Price Output & Instant WhatsApp Dispatch -->
+      <div class="price-output-box">
+        <span>Estimated All-Inclusive Group Tariff</span>
+        <div class="final-price"><span id="priceDisplay">₹12,500 – ₹14,500</span></div>
+        <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 18px;">Click below to dispatch all filled details directly to WhatsApp.</p>
+        <button class="btn-luxury-primary" style="width: 100%; border: none; cursor: pointer; background: var(--gold-gradient); color: #070908;" onclick="sendDirectWhatsAppBooking()">
+          <i class="fa-brands fa-whatsapp"></i> Confirm & Send Complete Booking to WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. ADVANCE BOOKING & UPI VOUCHER CARD -->
+  <section class="reserve-box" id="booking">
+    <div class="verified-pill">Hassle-Free Booking</div>
+    <h3 class="serif-title" style="font-size: 1.4rem; margin: 10px 0;">Reserve Your Dates with ₹2,000 Advance</h3>
+    <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 480px; margin: 0 auto;">Scan with any UPI App (Google Pay, PhonePe, Paytm) to lock in your fleet & tour dates. Instant official WhatsApp receipt issued.</p>
+    
+    <div class="qr-container">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=9947585233@upi&pn=Amanath%20Tours&am=2000" alt="UPI QR Code" loading="lazy">
+    </div>
+
+    <div class="upi-tag">UPI ID: <strong style="color: var(--gold-primary);">9947585233@upi</strong></div>
+
+    <div>
+      <a href="https://wa.me/919947585233?text=Payment%20Done%20for%20Booking" class="btn-luxury-primary" style="width: 100%; display: block; text-align: center;">
+        <i class="fa-brands fa-whatsapp"></i> Send Payment Screenshot on WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- 4. VERIFIED GUEST REVIEWS SECTION -->
+  <section class="reviews-section">
+    <div style="text-align: center;">
+      <div class="verified-pill">Guest Chronicles</div>
+      <h2 class="serif-title" style="font-size: 1.8rem; margin-bottom: 8px;">Unfiltered Guest Impressions</h2>
+      <p style="color: var(--text-muted); font-size: 0.88rem;">Read how discerning travelers experience our chauffeur concierges across south India.</p>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div>
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-quote">"The Nilgiri Toy Train experience arranged by Amanath in Ooty was pure vintage magic! Clean Innova Crysta, smooth mountain driving, and punctual chauffeur."</p>
+        </div>
+        <div class="reviewer-meta">
+          <div>
+            <div class="reviewer-name">Kavitha & Arvind Nair</div>
+            <div class="reviewer-trip">Ooty Toy Train & Heritage Tour</div>
+          </div>
+          <i class="fa-solid fa-shield-halved" style="color: var(--gold-primary); font-size: 0.9rem;" title="Verified Traveler"></i>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div>
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-quote">"Our Bangaram Island trip in Lakshadweep was handled like royalty. All permits and speedboats were seamlessly coordinated over WhatsApp. Unrivaled service!"</p>
+        </div>
+        <div class="reviewer-meta">
+          <div>
+            <div class="reviewer-name">Dr. Sameer Siddique</div>
+            <div class="reviewer-trip">Lakshadweep Coral Expedition</div>
+          </div>
+          <i class="fa-solid fa-shield-halved" style="color: var(--gold-primary); font-size: 0.9rem;" title="Verified Traveler"></i>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div>
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-quote">"Private luxury houseboat in Alleppey was breathtaking. Authentic Karimeen pollichathu and sunset views. Transparent pricing without hidden broker fees."</p>
+        </div>
+        <div class="reviewer-meta">
+          <div>
+            <div class="reviewer-name">Rohit & Sunita Rao</div>
+            <div class="reviewer-trip">Alleppey Private Cruise</div>
+          </div>
+          <i class="fa-solid fa-shield-halved" style="color: var(--gold-primary); font-size: 0.9rem;" title="Verified Traveler"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FINAL GUEST OPINIONS, RATINGS & SUGGESTIONS CORNER -->
+  <section class="opinion-feedback-section">
+    <div class="opinion-card">
+      <div style="text-align: center; margin-bottom: 22px;">
+        <div class="verified-pill">Traveler Voice & Public Opinion</div>
+        <h3 class="serif-title" style="font-size: 1.4rem;">Share Your Opinions & Ratings</h3>
+        <p style="color: var(--text-muted); font-size: 0.82rem; margin-top: 4px;">Whether you traveled with us or are planning ahead, share your valuable thoughts, reviews, or route suggestions.</p>
+      </div>
+
+      <div class="calc-grid">
+        <div class="input-field">
+          <label><i class="fa-solid fa-user-pen"></i> Your Name</label>
+          <input type="text" id="feedbackName" placeholder="e.g. Anand Krishnan">
+        </div>
+        <div class="input-field">
+          <label><i class="fa-solid fa-star"></i> Rate Us / Experience</label>
+          <select id="feedbackRating">
+            <option value="5 Stars (Exceptional)">★★★★★ 5 Stars (Exceptional Service)</option>
+            <option value="4 Stars (Great Experience)">★★★★☆ 4 Stars (Great Experience)</option>
+            <option value="3 Stars (Good)">★★★☆☆ 3 Stars (Good)</option>
+          </select>
+        </div>
+        <div class="input-field" style="grid-column: 1 / -1;">
+          <label><i class="fa-solid fa-comment-dots"></i> Your Opinions, Reviews or Route Ideas</label>
+          <textarea id="feedbackText" placeholder="Write your valuable review, driver feedback, or suggestions for new itineraries here..."></textarea>
+        </div>
+      </div>
+
+      <button class="btn-luxury-primary" style="width: 100%; border: none; cursor: pointer; margin-top: 15px;" onclick="sendFeedbackToWhatsApp()">
+        <i class="fa-solid fa-paper-plane"></i> Submit Opinion Directly to Concierge
+      </button>
+    </div>
+  </section>
+
+  <!-- Luxury Footer -->
+  <footer>
+    <h4 class="serif-title" style="color: #fff; margin-bottom: 8px;">AMANATH TOURS & MOBILITY CONCIERGE</h4>
+    <p>Kerala • Ooty • Lakshadweep • Andaman Islands • Desk: +91 99475 85233</p>
+    <p style="margin-top: 15px; opacity: 0.5;">&copy; 2026 Amanath Tours. Uncompromised Quality, Direct Operator</p>
+  </footer>
+
+  <!-- REDESIGNED ROYAL LUXURY FLOATING WHATSAPP CONCIERGE -->
+  <a href="https://wa.me/919947585233" target="_blank" class="royal-wa-concierge" title="Direct WhatsApp Concierge">
+    <div class="royal-wa-icon-glow">
+      <i class="fa-brands fa-whatsapp"></i>
+    </div>
+    <div class="royal-wa-text-box">
+      <span class="royal-wa-sub">Direct Desk</span>
+      <span class="royal-wa-title">Concierge</span>
+    </div>
+  </a>
+
+  <!-- JavaScript Engine -->
+  <script>
+    function toggleProfileDetails(panelId) {
+      const panel = document.getElementById(panelId);
+      panel.classList.toggle('active');
+    }
+
+    function selectPackageFromCard(routeValue) {
+      const routeSelect = document.getElementById('routeSelect');
+      routeSelect.value = routeValue;
+      calculateTariff();
+      
+      const bookingDesk = document.getElementById('booking-desk');
+      bookingDesk.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function handleGroupChange() {
+      const groupSize = parseInt(document.getElementById('groupSizeSelect').value);
+      const fleetSelect = document.getElementById('fleetSelect');
+
+      if (groupSize <= 4) {
+        fleetSelect.value = "1.0";
+      } else if (groupSize <= 7) {
+        fleetSelect.value = "1.45";
+      } else if (groupSize <= 14) {
+        fleetSelect.value = "2.6";
+      } else if (groupSize <= 26) {
+        fleetSelect.value = "3.4";
+      } else {
+        fleetSelect.value = "5.8";
+      }
+
+      calculateTariff();
+    }
+
+    function calculateTariff() {
+      const routeRatePerDay = parseFloat(document.getElementById('routeSelect').value);
+      const days = parseInt(document.getElementById('daysSelect').value);
+      const fleetMultiplier = parseFloat(document.getElementById('fleetSelect').value);
+      const stayRatePerNight = parseFloat(document.getElementById('staySelect').value);
+      const groupSize = parseInt(document.getElementById('groupSizeSelect').value);
+
+      const nights = Math.max(1, days - 1);
+      
+      const totalVehicleCost = (routeRatePerDay * days) * fleetMultiplier;
+      const roomsRequired = Math.ceil(groupSize / 2);
+      const totalStayCost = (stayRatePerNight * roomsRequired) * nights;
+
+      const baseTotal = totalVehicleCost + totalStayCost;
+      const minEstimated = Math.round(baseTotal);
+      const maxEstimated = Math.round(baseTotal * 1.15);
+
+      document.getElementById('priceDisplay').innerText = 
+        `₹${minEstimated.toLocaleString('en-IN')} – ₹${maxEstimated.toLocaleString('en-IN')}`;
+    }
+
+    // Direct Form-to-WhatsApp Notification Engine
+    function sendDirectWhatsAppBooking() {
+      const name = document.getElementById('guestName').value.trim() || 'Valued Guest';
+      const phone = document.getElementById('guestPhone').value.trim() || 'Not Provided';
+      const pickupHub = document.getElementById('pickupPoint').value;
+      const pickupDetail = document.getElementById('pickupAddress').value.trim() || 'Terminal / Direct Arrival';
+      const travelDate = document.getElementById('travelDate').value || 'To be decided';
+      const route = document.getElementById('routeSelect').options[document.getElementById('routeSelect').selectedIndex].text;
+      const days = document.getElementById('daysSelect').options[document.getElementById('daysSelect').selectedIndex].text;
+      const group = document.getElementById('groupSizeSelect').options[document.getElementById('groupSizeSelect').selectedIndex].text;
+      const fleet = document.getElementById('fleetSelect').options[document.getElementById('fleetSelect').selectedIndex].text;
+      const stay = document.getElementById('staySelect').options[document.getElementById('staySelect').selectedIndex].text;
+      const opinion = document.getElementById('guestOpinion').value.trim() || 'Standard luxury itinerary requested';
+      const estimatedPrice = document.getElementById('priceDisplay').innerText;
+      
+      const bookingRef = 'AMN-' + Math.floor(100000 + Math.random() * 900000);
+
+      const message = `*═ ═ AMANATH TOURS RESERVATION ═ ═*%0A` +
+        `🆔 *Booking Ref:* ${bookingRef}%0A%0A` +
+        `👤 *Guest Name:* ${name}%0A` +
+        `📞 *Contact Phone:* ${phone}%0A` +
+        `✈️ *Pickup Point / Hub:* ${pickupHub}%0A` +
+        `📍 *Pickup Address / Flight:* ${pickupDetail}%0A` +
+        `🗺️️ *Package / Route:* ${route}%0A` +
+        `📅 *Departure Date:* ${travelDate}%0A` +
+        `⏳ *Total Duration:* ${days}%0A` +
+        `👥 *Party Size:* ${group}%0A` +
+        `🚗 *Chauffeur Fleet:* ${fleet}%0A` +
+        `🏨 *Stay Level:* ${stay}%0A` +
+        `📝 *Custom Requests & Preferences:* ${opinion}%0A%0A` +
+        `💵 *Estimated Total Tariff:* ${estimatedPrice}%0A` +
+        `━━━━━━━━━━━━━━━━━━%0A` +
+        `_Please verify chauffeur availability and confirm my reservation voucher._`;
+
+      window.open(`https://wa.me/919947585233?text=${message}`, '_blank');
+    }
+
+    function sendFeedbackToWhatsApp() {
+      const name = document.getElementById('feedbackName').value.trim() || 'Anonymous Guest';
+      const rating = document.getElementById('feedbackRating').value;
+      const feedback = document.getElementById('feedbackText').value.trim();
+
+      if (!feedback) {
+        alert("Please write your suggestions or opinion before submitting.");
+        return;
+      }
+
+      const message = `*═ GUEST OPINION & REVIEW ═*%0A%0A` +
+        `👤 *Guest Name:* ${name}%0A` +
+        `⭐ *Rating:* ${rating}%0A` +
+        `💬 *Thoughts & Suggestions:* ${feedback}%0A%0A` +
+        `_Dispatched via Amanath Concierge Portal_`;
+
+      window.open(`https://wa.me/919947585233?text=${message}`, '_blank');
+    }
+
+    // Set default travel date as tomorrow
+    window.onload = function() {
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      document.getElementById('travelDate').value = tomorrow.toISOString().split('T')[0];
+      calculateTariff();
+    };
+  </script>
+</body>
+</html>
